@@ -1,33 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+// import {RedButton, BlueButton, GreenButton} from "./Components/Button.style";
+// import {Button, ButtonLabel} from "./Components/Button.style";
+import {StyledButton} from "./Components/Button.style";
+import {AppContainer} from "./Components/Container.style";
+import {GlobalStyles} from "./GlobalStyles.style";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* <div className="App">Leave a like or subscribe!</div> */}
+      {/* <div><App>Leave a like or subscribe!</App></div> */}
+      {/* <div className="App">
+      <Button backgroundColor="red" fontWeigh="10px">Test Button 1 Click</Button>
+      {/* <BlueButton>Test Button 2 Click</BlueButton>
+      <GreenButton>Test Button 3 Click</GreenButton> */}
+      {/* <Button backgroundColor="violet" fontWeigh="12px">Test Button 2 Click</Button>
+      </div> */} 
+
+      <AppContainer>
+      {/* <Button backgroundColor="red"><ButtonLabel>Test Button 1 Click</ButtonLabel> </Button> */}
+      <GlobalStyles/>
+        <StyledButton buttonLabel="Click here 123" backgroundColor="red"></StyledButton>
+
+      </AppContainer>
     </>
   )
 }
